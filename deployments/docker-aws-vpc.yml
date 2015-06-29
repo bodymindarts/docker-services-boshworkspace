@@ -4,7 +4,7 @@ director_uuid: DIRECTOR_UUID
 
 releases:
   - name: docker
-    version: latest
+    version: 13
     git: https://github.com/cf-platform-eng/docker-boshrelease.git
 
 stemcells:
@@ -25,7 +25,7 @@ meta:
     auth_password: 'containers'
   nats:
     user: nats
-    password: nats
+    password: NATS_PASSWORD
     port: 4222
     machines:
       - 10.10.3.11
