@@ -24,7 +24,7 @@ jobs:
         - name: agent
           image: "progrium/consul:latest"
           memory: "256m"
-          command: (( "-dc " meta.env_name " -node docker-consul-agent-0 -retry-join 10.10.10.250 -rejoin" ))
+          command: (( "-dc " meta.env_name " -node docker-consul-agent-0 -retry-join 10.10.10.250 -rejoin -advertise 10.10.5.251" ))
         - name: registrator
           image: "gliderlabs/registrator:v4"
           memory: "256m"
