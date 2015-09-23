@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace.svg)](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace)
+
 docker-services-boshworkspace
 =============================
 
