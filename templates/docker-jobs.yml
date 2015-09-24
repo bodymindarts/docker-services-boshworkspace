@@ -1,12 +1,39 @@
 networks: (( merge ))
 
+meta:
+  release:
+    docker: docker
+  env_name: (( merge || "env-name" ))
+
 jobs:
   - name: docker
     templates:
-      - name: docker
-      - name: cf-containers-broker
+    - name: docker
+      release: docker
+    - name: cf-containers-broker
+      release: docker
+    - name: containers
+      release: docker
     instances: 1
     resource_pool: default
     persistent_disk: 65536
     networks:
       - name: default
+    properties:
+      containers:
+        - name: agent
+          image: "progrium/consul:latest"
+          memory: "256m"
+          command: (( "-dc " meta.env_name " -node docker-consul-agent-0 -retry-join 10.10.10.250 -rejoin -advertise 10.10.5.251" ))
+        - name: registrator
+          image: "gliderlabs/registrator:v4"
+          memory: "256m"
+          command: "consul://agent:8500"
+          depends_on:
+            - "agent"
+          links:
+            - "agent:agent"
+          volumes:
+            - "/var/vcap/data/sys/run/docker:/tmp/docker"
+          env_vars:
+            - "DOCKER_HOST=unix:///tmp/docker/docker.sock"

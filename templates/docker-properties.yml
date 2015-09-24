@@ -786,7 +786,7 @@ properties:
             name: 'free'
             container:
               backend: 'docker'
-              image: 'ansi/mosquitto'
+              image: 'trustedanalytics/mosquitto'
               tag: 'latest'
               persistent_volumes:
                 - '/data'
