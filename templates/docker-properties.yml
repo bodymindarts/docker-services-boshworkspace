@@ -876,3 +876,49 @@ properties:
                   unit: 'MONTHLY'
               bullets:
                 - 'RStudio® IDE running inside a Docker container' 
+      - id: '2kfj34ac-ad34-0pa0-12f7-d3f2a28h08e3'
+        name: 'postgresql94'
+        description: 'PostgreSQL 9.4 service for application development and testing'
+        bindable: true
+        tags:
+          - 'postgresql94'
+          - 'postgresql'
+          - 'relational'
+        metadata:
+          displayName: 'Postgresql9.4'
+          longDescription: 'A PostgreSQL 9.4 service for development and testing running inside a Docker container'
+          providerDisplayName: 'Pivotal Software'
+          documentationUrl: 'http://docs.run.pivotal.io'
+          supportUrl: 'http://support.run.pivotal.io/home'
+        dashboard_client:
+          id: 'p-postgre94-client'
+          secret: 'p-postgre94-secret'
+          redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
+        plans:
+          - id: '1a23xxxc-4145-4g18-8ee3-axxxxxa53x1d'
+            name: 'free'
+            container:
+              backend: 'docker'
+              image: 'postgres'
+              tag: 'latest'
+              persistent_volumes:
+                - '/data'
+            credentials:
+              username:
+                key: 'POSTGRES_USER'
+              password:
+                key: 'POSTGRES_PASSWORD'
+              dbname:
+                key: 'POSTGRES_DBNAME'
+                value: 'postgres'
+              uri:
+                prefix: 'postgres94'
+            description: 'Free Trial'
+            metadata:
+              costs:
+                - amount:
+                    usd: 0.0
+                  unit: 'MONTHLY'
+              bullets:
+                - 'Dedicated PostgreSQL 9.4 server'
+                - 'PostgreSQL 9.4 running inside a Docker container'
