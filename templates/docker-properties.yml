@@ -900,7 +900,7 @@ properties:
             container:
               backend: 'docker'
               image: 'postgres'
-              tag: 'latest'
+              tag: '9.4'
               persistent_volumes:
                 - '/data'
             credentials:
