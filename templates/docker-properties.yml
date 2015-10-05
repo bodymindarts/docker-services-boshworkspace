@@ -453,7 +453,7 @@ properties:
               backend: 'docker'
               image: 'frodenas/memcached'
               tag: '1.4'
-              memory: '1g'
+              memory: '1024m'
             credentials:
               username:
                 key: 'MEMCACHED_USERNAME'
