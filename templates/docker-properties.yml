@@ -891,8 +891,8 @@ properties:
           documentationUrl: 'http://docs.run.pivotal.io'
           supportUrl: 'http://support.run.pivotal.io/home'
         dashboard_client:
-          id: 'p-postgre94-client'
-          secret: 'p-postgre94-secret'
+          id: 'p-postgresql94-client'
+          secret: 'p-postgresql94-secret'
           redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
         plans:
           - id: '1a23xxxc-4145-4g18-8ee3-axxxxxa53x1d'
