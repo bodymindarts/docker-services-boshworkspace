@@ -6,9 +6,9 @@ meta:
     auth_password: (( merge || "containers" ))
     protocol: http
   nats: (( merge || meta.nats ))
-  https_proxy: (( merge || ~ ))
-  http_proxy: (( merge || ~ ))
-  no_proxy: (( merge || ~ ))
+  https_proxy: (( merge || "" ))
+  http_proxy: (( merge || "" ))
+  no_proxy: (( merge || "" ))
 
 properties:
   nats: (( meta.nats ))
