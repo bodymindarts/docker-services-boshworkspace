@@ -18,7 +18,6 @@ templates:
   - docker-aws-vpc.yml
 
 meta:
-  env_name: ENV_NAME
   cfcontainersbroker:
     cc_api_uri: CC_API_URL
     external_host: EXTERNAL_HOST
