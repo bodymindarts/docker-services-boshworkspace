@@ -1,5 +1,5 @@
 ---
-name: docker-aws-vpc
+name: docker-swarm-aws-vpc
 director_uuid: DIRECTOR_UUID
 releases:
 - name: docker
@@ -10,18 +10,18 @@ stemcells:
   version: 2941
 templates:
 - docker-deployment.yml
-- docker-jobs.yml
 - docker-properties.yml
+- docker-swarm-jobs.yml
 - docker-aws-vpc.yml
 meta:
-  cf_api_url: CF_API_URL
+  cf_api_uri: CF_API_URL
   broker:
     host: EXTERNAL_HOST
     username: containers
     password: containers
   nats:
     user: nats
-    password: NATS_PASSWORD
+    password: nats
     port: 4222
     machines:
     - 10.10.3.11
