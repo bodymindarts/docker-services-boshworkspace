@@ -748,7 +748,7 @@ properties:
         dashboard_client:
           id: 'influxdb-dashboard'
           secret: 'influxdb-secret'
-          redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
+          redirect_uri: (( meta.broker.protocol "://" meta.broker.host "/manage/auth/cloudfoundry/callback" ))
         plans:
           - id: '9de8d7a4-79d7-4ced-b6ba-53ea794cce29'
             name: 'free'
@@ -794,7 +794,7 @@ properties:
         dashboard_client:
           id: 'mosquitto-dashboard'
           secret: 'moquitto-secret'
-          redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
+          redirect_uri: (( meta.broker.protocol "://" meta.broker.host "/manage/auth/cloudfoundry/callback" ))
         plans:
           - id: '686e1adf-17f3-461b-a556-495abc34a6e9'
             name: 'free'
@@ -828,7 +828,7 @@ properties:
         dashboard_client:
           id: 'ipython-dashboard'
           secret: 'ipython-secret'
-          redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
+          redirect_uri: (( meta.broker.protocol "://" meta.broker.host "/manage/auth/cloudfoundry/callback" ))
         plans:
           - id: 'd2b7da94-26d0-11e5-8396-00155d3ca71c'
             name: 'free'
@@ -867,7 +867,7 @@ properties:
         dashboard_client:
           id: 'rstudio-dashboard'
           secret: 'rstudio-secret'
-          redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
+          redirect_uri: (( meta.broker.protocol "://" meta.broker.host "/manage/auth/cloudfoundry/callback" ))
         plans:
           - id: '4d457046-3211-11e5-bd0e-00155d3ca702'
             name: 'free'
@@ -907,7 +907,7 @@ properties:
         dashboard_client:
           id: 'p-postgresql94-client'
           secret: 'p-postgresql94-secret'
-          redirect_uri: (( meta.cfcontainersbroker.protocol "://" meta.cfcontainersbroker.external_host "/manage/auth/cloudfoundry/callback" ))
+          redirect_uri: (( meta.broker.protocol "://" meta.broker.host "/manage/auth/cloudfoundry/callback" ))
         plans:
           - id: '1a23xxxc-4145-4g18-8ee3-axxxxxa53x1d'
             name: 'free'

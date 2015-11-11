@@ -1,4 +1,5 @@
-[![Dependency Status](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace.svg)](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace)
+[![Dependency Status](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace.svg)](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace)[![Build Status](https://img.shields.io/travis/trustedanalytics/docker-services-boshworkspace/master.svg?style=flat-square)](https://travis-ci.org/trustedanalytics/docker-services-boshworkspace)
+
 
 docker-services-boshworkspace
 =============================
