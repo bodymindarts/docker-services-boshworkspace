@@ -508,8 +508,9 @@ properties:
             name: 'free'
             container:
               backend: 'docker'
-              image: 'frodenas/elasticsearch'
+              image: 'elasticsearch'
               tag: '1.3'
+              command: '-Des.default.path.data=/data -Des.default.path.logs=/logs --node.local=true --discovery.zen.ping.multicast.enabled=false'
               persistent_volumes:
                 - '/data'
             description: 'Free Trial'

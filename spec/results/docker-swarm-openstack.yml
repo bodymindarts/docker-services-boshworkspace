@@ -557,7 +557,9 @@ properties:
       plans:
       - container:
           backend: docker
-          image: frodenas/elasticsearch
+          command: -Des.default.path.data=/data -Des.default.path.logs=/logs --node.local=true
+            --discovery.zen.ping.multicast.enabled=false
+          image: elasticsearch
           persistent_volumes:
           - /data
           tag: "1.3"
