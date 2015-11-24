@@ -1,5 +1,5 @@
 ---
-name: docker-openstack
+name: docker-swarm-openstack
 director_uuid: DIRECTOR_UUID
 releases:
 - name: docker
@@ -11,17 +11,23 @@ stemcells:
 templates:
 - docker-deployment.yml
 - docker-properties.yml
-- docker-jobs.yml
+- docker-swarm-jobs.yml
 - docker-openstack.yml
 meta:
-  cf_api_url: CF_API_URL
+  cf_api_uri: CF_API_URL
+  openstack:
+    net_id: CF_SUBNET1
+    url: OS_AUTHURL
+    tenant: OS_TENANT
+    username: OS_USERNAME
+    api_key: OS_APIKEY
   broker:
     host: EXTERNAL_HOST
     username: containers
     password: containers
   nats:
     user: nats
-    password: NATS_PASSWORD
+    password: c1oudc0w
     port: 4222
     machines:
     - NATS_HOST
@@ -33,8 +39,8 @@ meta:
   ipmask: "IPMASK"
   dk1_quad: ".5"
   dns_servers:
-    - 8.8.8.8
-    - 8.8.4.4
-  http_proxy: ~ # HTTP_PROXY
-  https_proxy: ~ # HTTPS_PROXY
-  no_proxy: ~ # NO_PROXY
+  - 8.8.8.8
+  - 8.8.4.4
+  http_proxy: 
+  https_proxy: 
+  no_proxy: 

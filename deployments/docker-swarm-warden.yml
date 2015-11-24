@@ -1,5 +1,5 @@
 ---
-name: docker-warden
+name: docker-swarm-warden
 director_uuid: current
 releases:
 - name: docker
@@ -11,7 +11,7 @@ stemcells:
 templates:
 - docker-deployment.yml
 - docker-properties.yml
-- docker-jobs.yml
+- docker-swarm-jobs.yml
 - docker-warden.yml
 meta:
   cf_api_uri: https://api.10.244.0.34.xip.io

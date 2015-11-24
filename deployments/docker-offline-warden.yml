@@ -1,16 +1,20 @@
 ---
-name: docker-warden
+name: docker-offline-warden
 director_uuid: current
 releases:
 - name: docker
   version: '17'
   git: https://github.com/cf-platform-eng/docker-boshrelease.git
+- name: docker-broker-images
+  version: '1'
+  git: https://github.com/cloudfoundry-community/docker-broker-images-boshrelease.git
 stemcells:
 - name: bosh-warden-boshlite-ubuntu-trusty-go_agent
   version: 389
 templates:
 - docker-deployment.yml
 - docker-properties.yml
+- docker-offline.yml
 - docker-jobs.yml
 - docker-warden.yml
 meta:

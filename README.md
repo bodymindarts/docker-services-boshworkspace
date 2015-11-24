@@ -1,4 +1,4 @@
-[![Dependency Status](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace.svg)](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace)
+[![Dependency Status](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace.svg)](https://gemnasium.com/trustedanalytics/docker-services-boshworkspace)[![Build Status](https://img.shields.io/travis/trustedanalytics/docker-services-boshworkspace/master.svg?style=flat-square)](https://travis-ci.org/trustedanalytics/docker-services-boshworkspace)
 
 docker-services-boshworkspace
 =============================
@@ -65,6 +65,11 @@ bosh -n deploy
 ```
 
 By default, it assumes you are deploying into a `10.10.5.0/24` subnet. This is an optimization for users of [terraform-aws-cf-install](https://github.com/cloudfoundry-community/terraform-aws-cf-install) which creates this subnet for us.
+
+#### Swarm & Offline images
+There are alternative deployment files for using docker with swarm.
+If you want to install the docker service broker without internet access be sure to checkout the offline deployments.
+Which use the [docker-broker-images-boshrelease](https://github.com/cloudfoundry-community/docker-broker-images-boshrelease) for installing the docker images.
 
 #### Alternate Network Configurations
 If you want to deploy into another subnet CIDR, then add a `meta.subnets` to your deployment file to look something like:
