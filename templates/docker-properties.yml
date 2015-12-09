@@ -31,8 +31,6 @@ properties:
     host: (( meta.broker.host ))
     component_name: 'cf-containers-broker'
     max_containers: 200
-    unicorn:
-      worker_processes: 1
 
     services:
       - id: '2fd814ac-d1f7-4d4a-a4f7-d386cd8fd8e3'
