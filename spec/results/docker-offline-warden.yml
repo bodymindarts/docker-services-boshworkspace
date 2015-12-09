@@ -23,7 +23,7 @@ jobs:
     release: docker
 - instances: 1
   lifecycle: errand
-  name: fetch-containers
+  name: fetch-containers-images
   networks:
   - default:
     - dns
@@ -1405,9 +1405,9 @@ properties:
   swarm_manager: null
 releases:
 - name: docker
-  version: "17"
+  version: "22"
 - name: docker-broker-images
-  version: "1"
+  version: "3"
 resource_pools:
 - cloud_properties:
     name: random

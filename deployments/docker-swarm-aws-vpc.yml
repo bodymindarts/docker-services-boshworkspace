@@ -3,7 +3,7 @@ name: docker-swarm-aws-vpc
 director_uuid: DIRECTOR_UUID
 releases:
 - name: docker
-  version: '17'
+  version: '22'
   git: https://github.com/cf-platform-eng/docker-boshrelease.git
 stemcells:
 - name: bosh-aws-xen-ubuntu-trusty-go_agent

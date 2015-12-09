@@ -3,7 +3,7 @@ name: docker-swarm-warden
 director_uuid: current
 releases:
 - name: docker
-  version: '17'
+  version: '22'
   git: https://github.com/cf-platform-eng/docker-boshrelease.git
 stemcells:
 - name: bosh-warden-boshlite-ubuntu-trusty-go_agent

@@ -1390,7 +1390,7 @@ properties:
   swarm_manager: null
 releases:
 - name: docker
-  version: "17"
+  version: "22"
 resource_pools:
 - cloud_properties:
     name: random

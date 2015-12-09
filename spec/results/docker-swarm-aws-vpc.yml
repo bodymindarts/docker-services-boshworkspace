@@ -39,7 +39,7 @@ jobs:
     release: docker
 - instances: 1
   lifecycle: errand
-  name: fetch-containers
+  name: fetch-containers-images
   networks:
   - default:
     - dns
@@ -47,7 +47,7 @@ jobs:
     name: default
   resource_pool: default
   templates:
-  - name: fetch-containers
+  - name: fetch-containers-images
     release: docker
 meta:
   environment: null
@@ -1022,7 +1022,7 @@ properties:
     port: "2375"
 releases:
 - name: docker
-  version: "17"
+  version: "22"
 resource_pools:
 - cloud_properties:
     ephemeral_disk:
